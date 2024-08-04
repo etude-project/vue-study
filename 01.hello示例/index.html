@@ -4,19 +4,24 @@
     <meta charset="UTF-8">
     <title>首页</title>
 
+    <!--①引入vue-->
     <script src="../node_modules/vue/dist/vue.js"></script>
 </head>
 
 <body>
+    <!--②创建一个容器-->
     <div id="root">
         <h1>你好，{{peopleName}}.</h1>
     </div>
 
     <script>
+        // ③创建vue对象
+        // 传入的参数是一个对象，管它叫配置对象.
+        // 配置对象中的k不能改，是人家规定好的.
         let x = new Vue
         (
             {
-               el: '#root',
+               el: '#root', // 用于指定当前对象为哪个容器服务，值通常为css选择器字符串.
                data:
                {
                    peopleName: '小小狗子'
