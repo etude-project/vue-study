@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <script src="../node_modules/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div class="root">
+        <h1>你好，{{peopleName}}，现在的时间戳是：{{Date.now()}}.</h1>
+        <a v-bind:href="url">点我跳转</a> <br/>
+        <a :href="url">点我跳转</a>
+    </div>
+
+    <script>
+        new Vue
+        (
+            {
+               el: '.root',
+               data:
+               {
+                   peopleName: '小小狗子',
+                   url: 'http://www.google.com'
+               }
+            }
+        );
+    </script>
+</body>
+
+</html>

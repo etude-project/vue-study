@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <script src="../node_modules/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        请输入你的名字：<input type="text" v-model:value="peopleName"/> <br/>
+        请输入你的年龄：<input type="text" v-model="age"/> <br/>
+
+        插值语法显示两个值：{{peopleName}} {{age}}
+    </div>
+
+    <script>
+        new Vue
+        (
+            {
+               el: '#root',
+               data:
+               {
+                   peopleName: '小小狗子',
+                   age: '12'
+               }
+            }
+        );
+    </script>
+</body>
+
+</html>
